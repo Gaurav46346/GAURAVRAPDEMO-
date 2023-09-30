@@ -1,0 +1,12 @@
+@EndUserText.label: 'Access Control for travel'
+@MappingRole: true
+define role ZI_RAP_TRAVEL_GAUR {
+    grant
+        select
+            on
+                ZI_RAP_TRAVEL_GAUR
+                    where
+                       ( Status ) = aspect pfcg_auth ( ZOSTAT2222, ZOSTAT2222, ACTVT = '03' )
+                       OR true;
+                        
+}

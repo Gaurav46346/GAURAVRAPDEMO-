@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition Travel'
+define service ZUI_Travel_SD {
+  expose /DMO/C_Travel_U;
+}

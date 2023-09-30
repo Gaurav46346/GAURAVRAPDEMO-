@@ -1,0 +1,5 @@
+CLASS zbp_i_rap_gau_travel DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_rap_gau_travel.
+ENDCLASS.
+
+CLASS zbp_i_rap_gau_travel IMPLEMENTATION.
+ENDCLASS.

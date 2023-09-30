@@ -1,0 +1,48 @@
+managed implementation in class ZBP_R_RAP_TRAVELGAURD unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZR_RAP_TRAVELGAURD alias Travel
+persistent table zrap_travelgaurd
+draft table ZRAP_TRAVLGAURD
+etag master Locallastchangedat
+lock master total etag Lastchangedat
+authorization master( global )
+
+{
+  field ( readonly )
+   TravelUUID,
+   Lastchangedat,
+   Locallastchangedat;
+
+  field ( numbering : managed )
+   TravelUUID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZRAP_TRAVELGAURD
+  {
+    TravelUUID = travel_uuid;
+    TravelID = travel_id;
+    AgencyID = agency_id;
+    CustomerID = customer_id;
+    BeginDate = begin_date;
+    EndDate = end_date;
+    BookingFee = booking_fee;
+    TotalPrice = total_price;
+    CurrencyCode = currency_code;
+    Description = description;
+    Status = status;
+    Lastchangedat = lastchangedat;
+    Locallastchangedat = locallastchangedat;
+  }
+}

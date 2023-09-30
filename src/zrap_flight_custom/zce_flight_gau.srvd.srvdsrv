@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition'
+define service ZCE_FLIGHT_GAU {
+  expose ZCE_FLIGHT_GAU as Flight;
+}
